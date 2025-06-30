@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nutri Scoop Intro</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body, html {
+      height: 100%;
+      font-family: 'Arial', sans-serif;
+      background-color: white;
+      overflow: hidden;
+    }
+
+    .slider-container {
+      display: flex;
+      width: 200%;
+      height: 100vh;
+      transition: transform 0.8s ease-in-out;
+    }
+
+    .slide {
+      width: 50%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: white;
+      overflow-y: auto;
+      position: relative;
+    }
+
+    /* Slide 1 specific styles */
+    .slide:first-child .slide-content {
+      width: 100%;
+      max-width: 800px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      padding: 30px;
+    }
+
+    /* Slide 2 specific styles (reverted to previous layout) */
+    .slide:nth-child(2) .slide-content {
+      width: 100%;
+      max-width: 800px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 30px;
+    }
+
+    /* Centered and enlarged logo for Slide 1 */
+    .slide:first-child .logo {
+      width: 350px;
+      max-width: 90%;
+      margin: 0 auto 40px;
+      display: block;
+    }
+
+    /* Smaller logo for Slide 2 (original style) */
+    .slide:nth-child(2) .logo {
+      width: 220px;
+      max-width: 90%;
+      margin: 30px auto 25px;
+      display: block;
+    }
+
+    h1, h2 {
+      margin-bottom: 20px;
+      text-align: center;
+      color: #2c3e50;
+    }
+
+    p {
+      text-align: center;
+      margin-bottom: 20px;
+      line-height: 1.6;
+      max-width: 800px;
+      color: #34495e;
+    }
+
+    /* Horizontal Image Queue */
+    .image-queue {
+      display: flex;
+      overflow-x: auto;
+      gap: 15px;
+      padding: 20px 10px;
+      width: 100%;
+      max-width: 800px;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+      margin: 15px 0;
+    }
+
+    .image-queue::-webkit-scrollbar {
+      display: none;
+    }
+
+    .image-queue img {
+      height: 160px;
+      width: auto;
+      border-radius: 10px;
+      object-fit: cover;
+      flex-shrink: 0;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .image-queue img:hover {
+      transform: scale(1.05);
+    }
+
+    .button {
+      padding: 12px 30px;
+      background: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 30px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 25px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .button:hover {
+      background-color: #3e8e41;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    }
+
+    .nav-btn {
+      position: absolute;
+      bottom: 25px;
+      background: rgba(0, 0, 0, 0.4);
+      color: white;
+      border: none;
+      padding: 12px 17px;
+      cursor: pointer;
+      border-radius: 50%;
+      z-index: 10;
+      transition: all 0.3s ease;
+    }
+
+    .nav-btn:hover {
+      background: rgba(0, 0, 0, 0.6);
+      transform: scale(1.1);
+    }
+
+    .prev-btn {
+      left: 25px;
+    }
+
+    .next-btn {
+      right: 25px;
+    }
+
+    .fun-text {
+      font-style: italic;
+      color: #4CAF50;
+      margin: 20px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="slider-container" id="slider">
+    <!-- Slide 1 - New Centered Layout -->
+    <section class="slide">
+      <div class="slide-content">
+        <img src="NutriSCoop_logo.png" alt="Nutri Scoop Logo" class="logo" />
+        <p class="fun-text"></p>
+        <h1>Welcome to Nutri Scoop</h1>
+        <p>Your Ultimate Guide to Fitness.</p>
+      </div>
+      <button class="nav-btn next-btn" onclick="goToSlide(1)">➜</button>
+    </section>
+
+    <!-- Slide 2 - Original Layout -->
+    <section class="slide">
+      <div class="slide-content">
+        <img src="NutriSCoop_logo.png" alt="Nutri Scoop Logo" class="logo" />
+        <h2>What is Nutri-Scoop?</h2>
+        <p>
+          Nutri Scoop is a user-friendly web app that helps you understand the nutritional content of your food in the easiest way possible—by converting everything into tablespoons. Instead of reading complicated nutrition labels with confusing grams and percentages, Nutri Scoop breaks it down for you based on your health concern, like diabetes, thyroid, PCOD, or general fitness.
+        </p>
+        
+        <div class="image-queue">
+          <img src="https://i.pinimg.com/474x/8c/0a/c5/8c0ac588978e7489e14c2f1712bb57ca.jpg" alt="Healthy breakfast options" />
+          <img src="https://i.pinimg.com/736x/81/ca/37/81ca3798fec886e92f21b8aa416e05f5.jpg" alt="Nutrition facts visualization" />
+          <img src="https://i.pinimg.com/474x/e6/f7/55/e6f755e8afc6d74adaa2b964ebf35974.jpg" alt="Sugar content comparison" />
+          <img src="https://i.pinimg.com/474x/a5/a9/ec/a5a9ec643e81c8cd2e7992130cc97cf5.jpg" alt="Healthy meal prep" />
+          <img src="https://i.pinimg.com/474x/4a/9e/74/4a9e745b8d14b6f88eb6d59a0dae3e2d.jpg" alt="Portion control guide" />
+          <img src="https://i.pinimg.com/474x/35/e3/2e/35e32e0c7214724bff45ed81d55c3611.jpg" alt="Grocery shopping tips" />
+          <img src="https://i.pinimg.com/474x/56/55/50/565550654e9c647d3b6f176b8792e8a9.jpg" alt="Healthy snack alternatives" />
+          <img src="https://i.pinimg.com/474x/99/a0/df/99a0df146cc2d21c4650996808978c7e.jpg" alt="Nutrition label breakdown" />
+          <img src="https://i.pinimg.com/474x/94/9d/8a/949d8a1328809caaa03b087a7cb6d680.jpg" alt="Diet planning" />
+          <img src="https://i.pinimg.com/474x/c0/37/91/c037911ff33b363c8926cc571b347ece.jpg" alt="Healthy lifestyle" />
+        </div>
+
+        <p class="fun-text">
+          Ever stood in a grocery store trying to decode those complicated nutritional labels? "How many grams is one tablespoon again?" We've been there—and that's exactly why Nutri Scoop was born! We wanted to turn that head-scratching moment into an "aha!" one.
+        </p>
+        
+        <p>
+          Instead of confusing numbers and percentages, Nutri Scoop gives you the scoop (literally!)—breaking down the nutrition in your favorite products into tablespoons and easy-to-understand portions. Because healthy choices should feel simple, not stressful.
+        </p>
+
+        <p>
+          Think of Nutri Scoop as your cute little health buddy that's always by your side. Whether you're someone managing your blood sugar, dealing with thyroid or PCOD, or just trying to stay fit and fabulous, this app's got your back. Just tap your concern, and voilà—we show you which products fit your lifestyle and how much of them you can actually enjoy. No guesswork, no calculators—just clear, scoop-sized answers!
+        </p>
+
+        <p>
+          Our mission? To make healthy living feel a little more doable (and a lot more fun). Nutri Scoop isn't just an app—it's a tiny cheerleader in your pocket, helping you eat smart, stay happy, and treat your body with the love it deserves. So whether you're counting scoops instead of grams or picking drinks that match your goals, you're not alone. You've got Nutri Scoop—and we're rooting for you! 🥄💚
+        </p>
+
+        <a class="button" href="login.html">Start Your Journey Today</a>
+      </div>
+      <button class="nav-btn prev-btn" onclick="goToSlide(0)">←</button>
+    </section>
+  </div>
+
+  <script>
+    function goToSlide(slideIndex) {
+      const slider = document.getElementById('slider');
+      slider.style.transform = `translateX(-${slideIndex * 50}%)`;
+    }
+  </script>
+</body>
+</html>
