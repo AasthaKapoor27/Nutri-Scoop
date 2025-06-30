@@ -1,0 +1,66 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Green Bar Header */
+.green-bar {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+/* Heading */
+h2 {
+    margin-top: 20px;
+}
+
+/* Styling for Health Concerns Section */
+.concerns {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.concern-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px; /* Ensures equal width for all items */
+}
+
+.concern-item img {
+    width: 150px;  /* Fixes all images to same size */
+    height: 150px;
+    object-fit: cover; /* Crops excess while maintaining aspect ratio */
+    border-radius: 10px;
+}
+
+/* Button Styling */
+.concern-item button {
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.concern-item button:hover {
+    background-color: #45a049;
+}
+
+/* Footer */
+footer {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f1f1f1;
+}
