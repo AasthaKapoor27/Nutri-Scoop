@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutri Scoop - Ultimate Guide to Fitness</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="scripts.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .green-bar {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+        #beverages {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+        .product {
+            margin: 15px;
+            text-align: center;
+            flex: 1 0 200px;
+            max-width: 200px;
+        }
+        .product img {
+            max-width: 100%;
+            height: auto;
+            cursor: pointer;
+        }
+        h2 {
+            text-align: center;
+            width: 100%;
+        }
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #f1f1f1;
+        }
+        
+        /* ===== CUSTOM ALERT STYLES ===== */
+        .custom-alert {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .alert-content {
+            background: #4CAF50;
+            color: white;
+            padding: 25px;
+            border-radius: 8px;
+            text-align: center;
+            max-width: 80%;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            animation: fadeIn 0.3s;
+        }
+        
+        .alert-content button {
+            background: white;
+            color: #4CAF50;
+            border: none;
+            padding: 8px 20px;
+            margin-top: 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <header class="green-bar">
+        <h1>Nutri Scoop</h1>
+        <h2>Ultimate Guide to Fitness</h2>
+    </header>
+    
+    <section id="beverages">
+        <h2>Beverages</h2>
+        <div class="product">
+            <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=450/app/assets/products/sliding_images/jpeg/ad55f7c9-4d80-4a5b-a50a-d307d51bacc1.jpg?ts=1721905089" alt="Real Fruit Juice Cranberry">
+            <p>Real Fruit Juice Cranberry</p>
+        </div>
+        <div class="product">
+            <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=450/da/cms-assets/cms/product/2a1fd561-f816-416c-8336-d745c9804a02.jpg?ts=1739951968" alt="Real Fruit Juice Orange">
+            <p>Real Fruit Juice Orange</p>
+        </div>
+        <div class="product">
+            <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=450/da/cms-assets/cms/product/c6822994-e96a-4c54-ae53-d6d6210e259f.jpg?ts=1740295351" alt="Coca Cola">
+            <p>Coca Cola</p>
+        </div>
+        <div class="product">
+            <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=450/app/assets/products/sliding_images/jpeg/9734089f-7356-4df8-9e7b-b11b46dc35b4.jpg?ts=1712912544" alt="Coconut Water">
+            <p>Coconut Water</p>
+        </div>
+        <div class="product">
+            <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=450/app/assets/products/sliding_images/jpeg/93c6c109-1bb3-4443-a3c3-645e6338bca6.jpg?ts=1707312324" alt="Jamun Juice Paper Boat">
+            <p>Jamun Juice Paper Boat</p>
+        </div>
+        <div class="product">
+            <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=450/app/images/products/sliding_image/15288a.jpg?ts=1698840601" alt="Diet Coke">
+            <p>Diet Coke</p>
+        </div>
+        <div class="product">
+            <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=450/da/cms-assets/cms/product/b775ae56-e02b-4d46-9b95-7a332962c796.jpg" alt="Jimmy's Sparkling Water">
+            <p>Jimmy's Sparkling Water</p>
+        </div>
+        <div class="product">
+            <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=450/app/assets/products/sliding_images/jpeg/8ea6dae4-049b-4073-8a50-ed4622e4c2a9.jpg?ts=1724762434" alt="Pepsi">
+            <p>Pepsi</p>
+        </div>
+        <div class="product">
+            <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=450/app/assets/products/sliding_images/jpeg/735df54d-b1ae-4313-96fe-010b2bc7c3b3.jpg?ts=1722345644" alt="Coolberg Malt Non-Alcoholic Beer">
+            <p>Coolberg Malt Non-Alcoholic Beer</p>
+        </div>
+        <div class="product">
+            <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/assets/products/sliding_images/jpeg/95d7b223-1f0c-4689-826c-bf88f4dc3c2a.jpg?ts=1720616155" alt="Real Activ Mixed Fruit Juice">
+            <p>Real Activ Mixed Fruit Juice</p>
+        </div>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 Nutri Scoop - Ultimate Guide to Fitness</p>
+        <p><a href="index.html">Back to Home</a></p>
+    </footer>
+
+    <!-- Custom Alert Box -->
+    <div id="customAlert" class="custom-alert">
+        <div class="alert-content">
+            <p id="alertMessage"></p>
+            <button onclick="closeCustomAlert()">OK</button>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
