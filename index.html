@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nutri Scoop - Ultimate Guide to Fitness</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: white;
+    }
+
+    .green-header {
+      background-color: #4CAF50;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .green-header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+
+    .green-header h2 {
+      margin: 8px 0 0;
+      color: white;
+      font-weight: normal;
+      font-size: 1.2rem;
+    }
+
+    .content-section {
+      padding: 20px 15px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* Compact Fact Box Queue */
+    .fact-queue {
+      display: flex;
+      overflow-x: auto;
+      gap: 12px;
+      padding: 10px 5px;
+      margin: 20px 0;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+    }
+
+    .fact-queue::-webkit-scrollbar {
+      display: none;
+    }
+
+    .fact-box {
+      background: linear-gradient(to right, #a8e063, #56ab2f);
+      color: white;
+      padding: 12px;
+      border-radius: 10px;
+      min-width: 180px;
+      width: calc(40% - 20px); /* Show 2.5 boxes at once */
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+      flex-shrink: 0;
+    }
+
+    .fact-box:hover {
+      transform: translateY(-3px);
+    }
+
+    .fact-box h3 {
+      margin: 0 0 6px 0;
+      font-size: 1rem;
+      line-height: 1.2;
+    }
+
+    .fact-box p {
+      margin: 6px 0;
+      font-size: 0.8rem;
+      line-height: 1.3;
+    }
+
+    .target {
+      display: block;
+      font-weight: bold;
+      margin: 6px 0 2px;
+      font-size: 0.8rem;
+    }
+
+    /* Grocery Navigation */
+    .nav-buttons {
+      display: flex;
+      justify-content: center;
+      list-style-type: none;
+      padding: 0;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin: 30px 0;
+    }
+
+    .nav-image {
+      width: 150px;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+      transition: all 0.2s ease;
+    }
+
+    .nav-image:hover {
+      transform: scale(1.05);
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px 0;
+      background-color: #f1f1f1;
+      margin-top: 20px;
+      font-size: 0.8rem;
+    }
+
+    h2.section-title {
+      text-align: center;
+      color: #333;
+      margin: 20px 0;
+      font-size: 1.4rem;
+    }
+  </style>
+</head>
+<body>
+  <header class="green-header">
+    <h1>Nutri Scoop</h1>
+    <h2>Your Ultimate Guide to Fitness.</h2>
+  </header>
+
+  <main class="content-section">
+    <!-- Compact Fact Boxes Queue -->
+    <h2 class="section-title">Nutrition Facts</h2>
+    <div class="fact-queue">
+      <div class="fact-box">
+        <h3>❌ White Flour</h3>
+        <span class="target">Thyroid & Fitness</span>
+        <p>Lacks fiber, slows digestion, causes energy dips and weight gain.</p>
+      </div>
+      <div class="fact-box">
+        <h3>❌ Refined Sugar</h3>
+        <span class="target">Diabetes & PCOD</span>
+        <p>Spikes blood sugar, messes with insulin and hormones.</p>
+      </div>
+      <div class="fact-box">
+        <h3>❌ Excess Caffeine</h3>
+        <span class="target">PCOD & Thyroid</span>
+        <p>Spikes cortisol, disrupts sensitive hormone balance.</p>
+      </div>
+      <div class="fact-box">
+        <h3>✅ Omega-3s</h3>
+        <span class="target">PCOD & Heart</span>
+        <p>Anti-inflammatory, balances hormones, supports heart.</p>
+      </div>
+      <div class="fact-box">
+        <h3>✅ Magnesium</h3>
+        <span class="target">Diabetes & Thyroid</span>
+        <p>Helps insulin use, regulates thyroid hormones.</p>
+      </div>
+      <div class="fact-box">
+        <h3>✅ Zinc</h3>
+        <span class="target">Thyroid Function</span>
+        <p>Crucial for thyroid hormone production.</p>
+      </div>
+    </div>
+
+    <!-- Groceries Section -->
+    <h2 class="section-title">Groceries</h2>
+    <nav>
+      <ul class="nav-buttons">
+        <li>
+          <a href="munchies.html">
+            <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/layout-engine/2022-11/Slice-5_4.png" alt="Munchies" class="nav-image" />
+          </a>
+        </li>
+        <li>
+          <a href="beverages.html">
+            <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/layout-engine/2022-11/Slice-4_9.png" alt="Beverages" class="nav-image" />
+          </a>
+        </li>
+        <li>
+          <a href="kitchen-king.html">
+            <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/layout-engine/2022-11/Slice-11.png" alt="Kitchen King" class="nav-image" />
+          </a>
+        </li>
+        <li>
+          <a href="sweets.html">
+            <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/layout-engine/2022-11/Slice-7_3.png" alt="Sweets" class="nav-image" />
+          </a>
+        </li>
+        <li>
+          <a href="dairy.html">
+            <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/layout-engine/2022-11/Slice-2_10.png" alt="Dairy" class="nav-image" />
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Nutri Scoop</p>
+  </footer>
+</body>
+</html>
